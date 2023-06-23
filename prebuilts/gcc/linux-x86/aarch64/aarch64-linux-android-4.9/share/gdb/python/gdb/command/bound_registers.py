@@ -22,14 +22,13 @@ class BoundPrinter:
     def __init__ (self, val):
         self.val = val
 
-    def to_string (self):
+    def to_string(self):
         upper = self.val["ubound"]
         lower = self.val["lbound"]
         size  = (long) ((upper) - (lower))
         if size > -1:
             size = size + 1
-        result = '{lbound = %s, ubound = %s} : size %s' % (lower, upper, size)
-        return result
+        return '{lbound = %s, ubound = %s} : size %s' % (lower, upper, size)
 
 # There are two pattern matching used: first one is related to a library
 # second is related to the type. Since we are displaying a register all
